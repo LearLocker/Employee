@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Преподаватели</title>
+    <link rel="icon" href="image/altstu-logo.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="index.css" rel="stylesheet">
+
+</head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<!-- Подключаем плагин Popper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+
+<!-- Подключаем Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">АлтГТУ</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">О кафедре <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="professor.html">Преподаватели</a>
+            </li>
+
+            <button type="button" class="btn btn-primary btn-sm btn-menu admin" data-toggle="modal"
+                    data-target="#person">
+                Добавить преподавателя
+            </button>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Поиск</button>
+        </form>
+    </div>
+</nav>
+
+
+<!-- Modal -->
+<div id="person" class="modal fade">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">"Сотрудник"</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-4 required">
+                            <label for="surname">Фамилия</label> <input type="text"
+                                                                        class="form-control"
+                                                                        id="surname"
+                                                                        placeholder="Иванов"/></div>
+                        <div class="form-group col-md-4 required">
+                            <label for="firstname">Имя</label> <input type="text"
+                                                                      class="form-control"
+                                                                      id="firstname"
+                                                                      placeholder="Иван"/>
+                        </div>
+                        <div class="form-group col-md-4 required">
+                            <label for="patronymic">Отчество</label> <input type="text"
+                                                                            class="form-control"
+                                                                            id="patronymic"
+                                                                            placeholder="Иванович" /> </div>
+                    </div>
+                    <div class="form-group required">
+                        <label for="position">Должность</label> <select
+                            class="custom-select" id="position">
+                        <option value="1" selected>...</option>
+                    </select></div>
+                    <div class="form-group">
+                        <label for="biography">Сведения</label>
+                        <textarea
+                                class="form-control" id="biography" rows="2">
+                        </textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="interests">Научные интересы</label> <textarea
+                            class="form-control" id="interests" rows="2"></textarea>
+                        <small class="form-text text-muted"> Каждый элемент списка необходимо указывать с новой строки
+                        </small>
+                    </div>
+                    <hr/>
+                    <div class="form-group" style="margin-bottom:0;">
+                        <div>
+                            <button type="button" class="btn btn-info btn-sm">Выбрать фотографию</button>
+                            <small class="text-muted" style="padding-left:10px;"> Не выбирайте новый файл, чтобы
+                                сохранить предыдущую фотографию
+                            </small>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+                <button type="button" class="btn btn-primary">Сохранить</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Карточка с card-img-top -->
+<div class="card-deck">
+    <div class="col">
+        <div class="card box-shadow">
+            <!-- Заголовок -->
+            <div class="card-header">Кантор Семен Аврамович</div>
+            <!-- Изображение -->
+            <img class="card-img-top" src="image/kantor_s_a.png" alt="...">
+            <!-- Тело -->
+            <div class="card-body">
+                <div class="position">Заведующий кафедрой, профессор</div>
+                <a class="btn btn-outline-secondary btn-sm btn-card" href="about.html">Подробнее</a>
+                <div class="actions admin">
+                    <button type="button" class="btn btn-danger btn-sm btn-card">Удалить</button>
+                    <button type="button" class="btn btn-primary btn-sm btn-card" data-toggle="modal"
+                            data-target="#person">Редактировать
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card box-shadow">
+            <!-- Заголовок -->
+            <div class="card-header">Крючкова Елена Николаевна</div>
+            <!-- Изображение -->
+            <img class="card-img-top" src="image/kruchkova.png" alt="...">
+            <!-- Тело -->
+            <div class="card-body">
+                <div class="position">Профессор</div>
+                <a class="btn btn-outline-secondary btn-sm btn-card" href="about.html">Подробнее</a>
+                <div class="actions admin">
+                    <button type="button" class="btn btn-danger btn-sm btn-card">Удалить</button>
+                    <button type="button" class="btn btn-primary btn-sm btn-card" data-toggle="modal"
+                            data-target="#person">Редактировать
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card box-shadow">
+            <!-- Заголовок -->
+            <div class="card-header"> Боровцов Евгений Геннадьевич</div>
+            <!-- Изображение -->
+            <img class="card-img-top" src="image/borovcov.png" alt="...">
+            <!-- Тело -->
+            <div class="card-body">
+                <div class="position">Доцент</div>
+                <a class="btn btn-outline-secondary btn-sm btn-card" href="about.html">Подробнее</a>
+                <div class="actions admin">
+                    <button type="button" class="btn btn-danger btn-sm btn-card">Удалить</button>
+                    <button type="button" class="btn btn-primary btn-sm btn-card" data-toggle="modal"
+                            data-target="#person">Редактировать
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card box-shadow">
+            <!-- Заголовок -->
+            <div class="card-header"> Бубнова Надежда Дмитриевна</div>
+            <!-- Изображение -->
+            <img class="card-img-top" src="image/bubnova.png" alt="..." style="width:100%">
+            <!-- Тело -->
+            <div class="card-body">
+                <div class="position">Старший преподаватель</div>
+                <a class="btn btn-outline-secondary btn-sm btn-card" href="about.html">Подробнее</a>
+                <div class="actions admin">
+                    <button type="button" class="btn btn-danger btn-sm btn-card">Удалить</button>
+                    <button type="button" class="btn btn-primary btn-sm btn-card" data-toggle="modal"
+                            data-target="#person">Редактировать
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<footer class="py-5 bg-dark">-->
+<!--<div class="container">-->
+<!--<div class="footer-content">-->
+<!--2018 © Хогвартс-->
+<!--</div>-->
+<!--</div>-->
+<!--</footer>-->
+</body>
+</html>
